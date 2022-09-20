@@ -144,17 +144,19 @@ button:hover, button:focus {
 
 @media screen and (min-width: 600px) {
     article {
-        height: 55vh;
+        height: 24rem;
         grid-template-columns: 50% 50%;
         width: 34rem;
         margin: 0 2rem;
     }
 
     .product-photograph {
+        height: 100%;
         overflow: visible;
     }
 
     .text-container {
+        height: 100%;
         justify-content: stretch;
         margin: 0.75rem 0;
     }
