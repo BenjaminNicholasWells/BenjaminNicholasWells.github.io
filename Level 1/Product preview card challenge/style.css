@@ -142,7 +142,7 @@ button:hover, button:focus {
 
 /* ###MEDIA QUERIES### */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
     
     article {
         height: 30rem;
@@ -152,7 +152,6 @@ button:hover, button:focus {
     }
 
     .product-photograph {
-        height: 100%;
         overflow: visible;
     }
 
@@ -163,11 +162,11 @@ button:hover, button:focus {
     }
 
     .text-container > * {
-        margin: 0.75rem 1.125rem;
+        margin: 0.75rem 1.5rem;
     }
 
     button {
-        width: calc(100% - 2rem);
+        width: calc(100% - 3rem);
     }
 }
 
