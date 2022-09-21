@@ -162,7 +162,7 @@ button:hover, button:focus {
         max-height: 100%;
         padding: 1em 2em;
     }
-    
+}    
 /* ###DEBUGGING### */
 
 /* * {
@@ -175,4 +175,7 @@ button:hover, button:focus {
     text-align: center;
     font-family: var(--serif);
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
