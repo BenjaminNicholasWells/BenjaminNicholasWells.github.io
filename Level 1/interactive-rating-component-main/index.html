@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+  <main class="rating-interface">
+    <div class="before-state" hidden>
+      <span class="star-icon"><img src="images/icon-star.svg" alt="star icon"></span>
+
+      <h1>How did we do?</h1>
+
+      <p class="instruction-text">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <div class="rating-btn">
+        <button type="button" class="rate-btn"> 1 </button>
+        <button type="button" class="rate-btn"> 2 </button>
+        <button type="button" class="rate-btn"> 3 </button>
+        <button type="button" class="rate-btn"> 4 </button>
+        <button type="button" class="rate-btn"> 5 </button>
+      </div>
+
+      <button type="button" class="submit-btn">S U B M I T</button>
+    </div>
+    <div class="after-state" hidden>
+      <img src="images/illustration-thank-you.svg" alt="form illustration">
+      <p class="rating-confirmation">You selected&nbsp;<span class="rating-output"></span>&nbsp;out of 5</p>
+      <p class="thank-you">Thank you!</p>
+      <p class="instruction-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!</p>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/BenjaminNicholasWells">B.N. Wells</a>.
+  </div>
+</body>
+</html>
