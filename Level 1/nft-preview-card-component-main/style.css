@@ -151,9 +151,18 @@ hr {
     text-indent: 0.75rem;
 }
 
+/* ### FRONTEND MENTOR FOOTER ### */
+
+.attribution { color: var(--soft-blue); font-size: 0.7rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 /* ### MEDIA QUERIES ### */
 
-
+@media screen and (max-height: 600px) {
+    :root {
+        font-size: 12px;
+    }    
+}
 
 /* ### DEBUGGING ### */
 
@@ -162,6 +171,3 @@ hr {
     background-color: hsla(228, 45%, 44%, 0.1);
 } */
 
-
-.attribution { color: var(--soft-blue); font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
