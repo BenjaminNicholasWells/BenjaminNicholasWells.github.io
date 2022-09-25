@@ -114,8 +114,8 @@ body {
 }
 
 main {
-    max-width: calc(375px - 1rem);
-    min-height: 90vh;
+    max-width: calc(375px - 0.5rem);
+    min-height: 80vh;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
@@ -177,6 +177,10 @@ main {
 @media screen and (max-height: 548px) {
     :root {
         font-size: 12px;
+    }
+
+    main {
+        min-height: 90vh;
     }
 
     .img-container {
