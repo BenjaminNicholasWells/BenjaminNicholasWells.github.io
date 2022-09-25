@@ -35,6 +35,10 @@ button {
 
 /* ### COLOUR ### */
 
+body {
+    background-color: var(--very-light-grey);
+}
+
 h2 {
     color: var(--very-light-grey);
 }
@@ -126,11 +130,18 @@ footer {
         /* color: lime; */
     }
     
+    body {
+        height: 100%;
+        display: grid;
+        /* place-content: center; */
+    }
+
     main {
         max-width: min(48rem, calc(100% - 4rem));
         /* min-height: 80vh; */
         grid-template-rows: none;
         grid-template-columns: repeat(3, 1fr);
+        align-self: center;
     }
 
 }
