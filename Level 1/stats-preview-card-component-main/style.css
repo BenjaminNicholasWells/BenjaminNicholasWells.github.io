@@ -144,8 +144,9 @@ footer {
 
 /* ### MEDIA QUERIES ### */
 
-@media screen and (min-width: 48rem) {
 
+@media screen and (min-width: 48rem) {
+    
     article {
         min-height: 50vh;
         min-width: 75vw;
@@ -157,39 +158,42 @@ footer {
     h1, .flavour-text {
         text-align: left;
     }
-
+    
     .image-container {
         background: url(images/image-header-desktop.jpg) var (--accent-colour);
     }
-
+    
     .text-container {
         margin: 2rem 4rem 2rem 2rem;
         align-items: flex-start;
         gap: 0.5rem;
     }
-
+    
     .stats-container {
         margin-top: 2rem;
         width: calc(100% - 2rem);
         flex-direction: row;
     }
-
+    
     .individual-stat {
         text-align: left;
     }
-
+    
 }
 
-@media screen and (max-height: 540px) {
+@media screen and (max-height: 24rem) {
     :root {
-        font-size: 12px;
+        font-size: 11px;
     }
-    
+
+    .stats-container {
+        flex-direction: row;
+    }  
 }
 
 /* ### DEBUGGING ### */
 
 
 
-.attribution { font-family: var(--primary-typeface); font-size: 11px; text-align: center; color: rgba(255, 255, 255, 0.6);}
+.attribution { font-family: var(--primary-typeface); font-size: 0.8rem; text-align: center; color: rgba(255, 255, 255, 0.6);}
 .attribution a { color: hsl(228, 45%, 44%); }
