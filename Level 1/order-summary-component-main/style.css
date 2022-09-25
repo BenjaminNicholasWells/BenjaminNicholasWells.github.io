@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ### GLOBAL VARIABLES ### */
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: sl(223, 47%, 23%);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+/* ### TYPOGRAPHY ### */
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.duration-text {
+    font-weight: 900;
+}
+
+.order-overview-container > * {
+    font-size: 0.9rem;
+}
+
+.order-overview-container > a {
+    font-weight: 900;
+}
+
+.button-container > * {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 900;
+}
+
+/* ### COLOUR ### */
+
+body {
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: 0px -50px;
+    background-color: var(--pale-blue);
+}
+
+main {
+    background-color: white;
+}
+
+h1 {
+    color: var(--dark-blue);
+}
+
+.summary-text, .price-text {
+    color: var(--desaturated-blue);
+}
+
+.duration-text {
+    color: var(--dark-blue);
+}
+
+.order-overview-container > a {
+    color: var(--bright-blue);
+}
+
+.order-overview-container > a:hover,
+.order-overview-container > a:focus {
+    cursor: pointer;
+    color: rgb(167, 95, 235);
+}
+
+.button-container > * {
+    border: none;
+}
+
+.payment-button {
+    background-color: var(--bright-blue);
+    color: white;
+    box-shadow: 0px 10px 20px var(--desaturated-blue);
+}
+
+.payment-button:hover,
+.payment-button:focus {
+    cursor: pointer;
+    background-color: rgb(167, 95, 235);
+}
+
+.cancel-button {
+    color: var(--desaturated-blue);
+    background-color: white;
+}
+
+.cancel-button:hover,
+.cancel-button:focus {
+    color: var(--dark-blue)
+}
+
+/* ### LAYOUT ### */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    max-width: calc(375px - 1rem);
+    min-height: 90vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container > img {
+    max-width: 100%;
+}
+
+.non-img-container {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+* {
+    text-align: center;   
+    line-height: 1.5rem; 
+}
+
+.order-overview-container {
+    background-color: var(--very-pale-blue);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 25% 45% 30%;
+    align-items: center;
+}
+
+.pricing-container {
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.button-container > * {
+    padding: 0.75rem 0;
+    border-radius: 1rem;
+}
+
+.payment-button {
+    z-index: 2;
+}
+
+/* ### FRONTEND MENTOR FOOTER ### */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ### MEDIA QUERIES ### */
+
+@media screen and (max-height: 548px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .img-container {
+        overflow: hidden;
+    }
+
+    .button-container > * {
+        font-size: 1rem;
+    }
+    
+}
+
+/* ### DEBUGGING ### */
+
