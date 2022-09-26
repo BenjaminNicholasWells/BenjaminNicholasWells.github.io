@@ -151,7 +151,7 @@ hr {
     margin: 0.5rem 0;
     transform: scaleY(0.5);
     color: var(--dark-gray);
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
 .stats-container {
