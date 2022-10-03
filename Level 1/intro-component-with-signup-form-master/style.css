@@ -1,0 +1,247 @@
+/* ### RESETS ### */
+
+*, *::after, *::before { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, li, figure, figcaption, blockquote, dl, dd { margin: 0; padding: 0; }
+
+/* ### GLOBAL VARIABLES ### */
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);    
+}
+
+/* ### GLOBAL VALUES ### */
+
+:root,
+button,
+::placeholder,
+input {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ### TYPOGRAPHY ### */
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+::placeholder {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.form--validation-warning {
+    font-size: 0.66rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.form--submit-button {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.form__terms-and-services {
+    font-size: 0.75rem;
+}
+
+.form__terms-and-services > a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ### COLOUR ### */
+
+body {
+    background: url(images/bg-intro-mobile.png) var(--red);
+}
+
+h1,
+.main__flavour-text {
+    color: white;
+}
+
+.main__trial-offer-container {
+    background-color: var(--blue);
+    box-shadow: 0px 0.5rem 0px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+form {
+    background-color: white;
+    box-shadow: 0px 0.5rem 0px rgba(0, 0, 0, 0.2);
+}
+
+div[data-validation="true"] > input {
+    outline: 1px solid var(--red);
+}
+
+div[data-validation="false"] > input {
+    outline: 2px solid var(--red);
+}
+
+.form--validation-warning {
+    color: var(--red);
+}
+
+.form--submit-button {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    box-shadow: 0px 0.2rem 0px rgba(0, 0, 0, 0.2);
+}
+
+.form__terms-and-services {
+    color: var(--grayish-blue);
+}
+
+.form__terms-and-services > a {
+    color: var(--dark-blue);
+}
+
+/* ### LAYOUT ### */
+
+main {
+    min-height: 100vh;
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > * {
+    text-align: center;
+}
+
+.main__flavour-text {
+    margin: 1rem auto 2rem;
+    width: calc(100% - 1rem);
+}
+
+.main__trial-offer-container {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.main--form-container {
+    width: 100%;
+}
+
+form {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+input {
+    width: calc(100% - 3rem);
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 0.25rem;
+}
+
+div[data-validation="false"] > input {
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+div[data-validation="true"] > input {
+    background-image: none;
+    }
+
+div[data-validation="false"] > p {
+    display: block;
+}
+
+div[data-validation="true"] > p {
+    display: none;
+}
+
+::placeholder,
+input {
+    text-indent: 1rem;
+}
+
+.form--validation-warning {
+    width: calc(100% - 1.5rem);
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+.form--submit-button {
+    width: calc(100% - 3rem);
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.form__terms-and-services {
+    margin: 0.5rem 2rem;
+}
+
+/* ### ANIMATIONS ### */
+
+/* ### MEDIA QUERIES ### */
+
+@media screen and (min-width: 52rem) {
+
+    main {
+        display: grid;
+        height: calc(100% - 3rem);
+        width: calc(100% - 12rem);
+        grid-template-columns: 57% 43%;
+    }
+
+    header {
+        margin-left: 8.5rem;
+    }
+
+    header > * {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 3.125rem;
+        line-height: 3.5rem;
+    }
+
+    .main__flavour-text {
+        margin: 2rem 0 0 0;
+        font-weight: 500;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    input {
+        width: calc(100% - 1rem);
+    }
+
+    .form--submit-button {
+        width: calc(100% - 1rem);
+    }
+
+}
+
+/* ### OVERRIDES ### */
+
+/* ### DEBUGGING ### */
+
+/* * {
+    border: 2px solid limegreen;
+    background-color: rgba(255, 0, 0, 0.2);
+} */
+
+.attribution { margin: 1rem 0; font-size: 0.75rem; text-align: center; color: white;}
+.attribution a { color: var(--grayish-blue); }
