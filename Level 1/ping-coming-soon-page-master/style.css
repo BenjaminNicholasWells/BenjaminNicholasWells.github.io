@@ -1,0 +1,377 @@
+/* ### RESETS ### */
+
+*, *::after, *::before { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, li, figure, figcaption, blockquote, dl, dd { margin: 0; padding: 0; }
+
+/* ### GLOBAL VARIABLES ### */
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* ### GLOBAL VALUES ### */
+
+:root,
+button,
+input,
+::placeholder {
+    font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+/* ### TYPOGRAPHY ### */
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+h1 > strong {
+    font-weight: 700;
+}
+
+.header__subtitle {
+    font-size: 1.25rem;
+}
+
+::placeholder,
+input {
+    font-size: 1.125rem;
+}
+
+form > button {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* ### COLOUR ### */
+
+h1 {
+    color: var(--gray);
+}
+
+h1 > strong {
+    color: var(--very-dark-blue);
+}
+
+.header__subtitle {
+    color: var(--very-dark-blue);
+}
+
+::placeholder {
+    color: var(--gray);
+}
+
+input[data-validation="false"]+p {
+    color: var(--light-red);
+}
+
+form > button {
+    background-color: var(--blue);
+    color: white;
+}
+
+form > button:hover {
+    background-color: var(--pale-blue);
+}
+
+.footer__social-media-icons-container {
+    border: 1px solid var(--pale-blue);
+    background-color: none;
+
+    transition: 500ms;
+}
+
+.footer__social-media-icons-container:hover {
+    background-color: var(--blue);
+
+    transition: 500ms;
+}
+
+.footer__social-media-icons-container > a {
+    text-decoration: none;
+}
+
+.footer__social-media-icons-container > a > svg {
+    fill: var(--blue);
+
+    transition: 500ms;
+}
+
+.footer__social-media-icons-container > a > svg:hover {
+    fill: white;
+}
+
+.footer__copyright {
+    color: var(--blue);
+}
+
+/* ### LAYOUT ### */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main {
+    max-width: calc(100% - 6rem);
+    margin-top: 2rem;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--img > img {
+    transform: scale(125%);
+}
+
+h1,
+.header__subtitle {
+    margin-top: 4rem;
+}
+
+.header__subtitle {
+    margin: 2rem auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+form > input,
+form > button {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 4.375rem;
+}
+
+form > input[data-validation="true"] {
+    border: 1px solid var(--pale-blue);
+}
+
+form > input[data-validation="false"] {
+    border: 2px solid var(--light-red);
+}
+
+form > input[data-validation="true"]+p {
+    display: none;
+
+    transition: 500ms;
+}
+
+form > input[data-validation="false"]+p {
+    display: block;
+    margin-bottom: 2rem;
+
+    transition: 500ms;
+}
+
+picture {
+    display: block;
+    margin: 6rem 0;
+}
+
+picture > img {
+    width: 100%;
+}
+
+footer > * {
+    text-align: center;
+}
+
+.footer__social-media-icons {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.footer__social-media-icons-container {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.footer__social-media-icons-container > a > svg {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ### ANIMATIONS ### */
+
+/* ### MEDIA QUERIES ### */
+
+@media screen and (max-width: 38rem) {
+    :root,
+    button,
+    ::placeholder {
+        font-size: 12px;
+        /* font-family: "Libre Franklin", sans-serif; */
+    }
+
+    body {
+        justify-content: space-evenly;
+    }
+    
+    main {
+        max-width: calc(100% - 4rem);
+    }
+
+    .header--img > img {
+        transform: scale(100%);
+    }
+
+    picture {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .footer__social-media-icons {
+        margin: 0 0 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .footer__social-media-icons-container {
+        height: 32px;
+        width: 32px;
+    }
+
+    .footer__social-media-icons-container > a > svg {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    
+    main {
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+
+    .header--img {
+        margin: 3rem 0;
+    }
+
+    .header--img > img {
+        transform: scale(100%);
+    }
+
+    h1,
+    .header__subtitle {
+        margin: 0 0 1rem 0;
+    }
+
+    .header__subtitle {
+        font-size: 1rem;
+        margin: 0 0 2rem 0;
+    }
+
+    form {
+        position: relative;
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: space-between;
+        margin: auto;
+        gap: 0.75rem;
+        /* width: auto; */
+    }
+    
+    form > input,
+    form > button {
+        padding: 0.75rem;
+        border-radius: 2rem;
+    }
+
+    ::placeholder,
+    form > input,
+    form > button,
+    form > p {
+        font-size: 0.75rem;
+    }
+
+    form > input {
+        min-width: calc(66% - 0.5rem);
+    }
+
+    form > button {
+        min-width: calc(33% - 0.5rem);
+    }
+
+    form > p {
+        position: absolute;
+        top: 3.25rem;
+        left: 0.75rem;
+    }
+
+    picture {
+        width: 50%;
+        margin: 3rem auto 0;
+    }
+
+    .footer__social-media-icons {
+        margin: 2rem 0 1rem 0;
+        gap: 0.75rem
+    }
+
+    .footer__social-media-icons-container {
+        height: 32px;
+        width: 32px;
+    }
+
+    .footer__social-media-icons-container > a > svg {
+        height: 24px;
+        width: 24px;
+    }
+
+
+    .footer__copyright {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* ### OVERRIDES ### */
+
+button:hover {
+    cursor: pointer;
+}
+
+/* ### DEBUGGING ### */
+
+/* * {
+    border: 2px solid limegreen;
+    background-color: rgba(255, 0, 0, 0.2);
+} */
+
+.attribution { margin: 0.5rem 0; font-size: 0.75rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
