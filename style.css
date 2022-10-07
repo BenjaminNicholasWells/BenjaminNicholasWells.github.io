@@ -3,21 +3,66 @@
 *, *::after, *::before { box-sizing: border-box; }
 body, h1, h2, h3, h4, p, li, figure, figcaption, blockquote, dl, dd { margin: 0; padding: 0; }
 
-/* ### GLOBAL VARIABLES ### */
+/* ############# 
+GLOBAL VARIABLES 
+############# */
 
-/* ### GLOBAL VALUES ### */
+:root{
+    --primary-colour-1: ;
+    --primary-colour-2: ;
+    --secondary-colour-1: ;
+    --secondary-colour-2: ;
+    --accent-colour-1: ;
+    --accent-colour-2: ;
+    --colour-gradient-1: ;
+    --colour-gradient-2: ;
+    --font-family-serif: serif;
+    --font-family-sans-serif: sans-serif;
+    --global-sizing-unit: ;
+}
 
-/* ### TYPOGRAPHY ### */
+/* ########## 
+GLOBAL VALUES
+########## */
 
-/* ### COLOUR ### */
+:root,
+button,
+input,
+::placeholder {
+    font-size: 16px;
+}
 
-/* ### LAYOUT ### */
+body {
+    min-height: 100vh;
+}
 
-/* ### ANIMATIONS ### */
+/* #######
+TYPOGRAPHY
+####### */
 
-/* ### OVERRIDES ### */
+/* ###############
+COLOUR AND ACCENTS
+############### */
 
-/* ### DEBUGGING ### */
+/* ###################
+LAYOUT AND COMPOSITION
+################### */
+
+/* ####### 
+ANIMATIONS
+####### */
+
+/* ##########
+MEDIA QUERIES
+########## */
+
+/* ######
+OVERRIDES
+###### */
+
+/* ######
+DEBUGGING
+###### */
 
 /* * {
     border: 2px solid limegreen;
