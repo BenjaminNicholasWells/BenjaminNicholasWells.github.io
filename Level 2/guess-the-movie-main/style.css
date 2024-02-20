@@ -1,3 +1,7 @@
+:root {
+    --custom-delay: 32000ms;
+}
+
 *, *::after, *::before, button {
     padding: 0;
     margin: 0;
@@ -30,6 +34,40 @@ section {
 section[data-active] {
     visibility: visible;
 }
+
+@keyframes ellipse1 {
+    0% {opacity: 1;}
+    33% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes ellipse2 {
+    0% {opacity: 0;}
+    33% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes ellipse3 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    66% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.ellipse-1 {
+    animation: ellipse1 3s infinite ease-in-out;
+}
+
+.ellipse-2 {
+    animation: ellipse2 3s infinite ease-in-out;
+}
+
+.ellipse-3 {
+    animation: ellipse3 3s infinite ease-in-out;
+}
+
 
 p {
     text-align: center;
@@ -136,7 +174,7 @@ footer {
     width: 100%;
     background-color: white;
     animation-name: timer;
-    animation-duration: 32s;
+    animation-duration: var(--custom-delay);
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -149,6 +187,7 @@ footer {
     10% {opacity: 0;}
     98% {opacity: 0;}
     100% {opacity: 0;}
+    
 }
 
 @keyframes frame2 {
@@ -216,29 +255,45 @@ footer {
 }
 
 .frame-1[data-active] {
-    animation: frame1 32s infinite;
+    animation: frame1 var(--custom-delay) infinite;
 }
 
 .frame-2[data-active] {
-    animation: frame2 32s infinite;
+    animation: frame2 var(--custom-delay) infinite;
 }
 
 .frame-3[data-active] {
-    animation: frame3 32s infinite;
+    animation: frame3 var(--custom-delay) infinite;
 }
 
 .frame-4[data-active] {
-    animation: frame4 32s infinite;
+    animation: frame4 var(--custom-delay) infinite;
 }
 
 .frame-5[data-active] {
-    animation: frame5 32s infinite;
+    animation: frame5 var(--custom-delay) infinite;
 }
 
 .frame-6[data-active] {
-    animation: frame6 32s infinite;
+    animation: frame6 var(--custom-delay) infinite;
 }
 
 .frame-7[data-active] {
-    animation: frame7 32s infinite;
+    animation: frame7 var(--custom-delay) infinite;
+}
+
+@media screen and (orientation: portrait) {
+
+    h1 {
+        font-size: 4dvw;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+    }
 }

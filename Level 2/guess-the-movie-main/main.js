@@ -1,4 +1,4 @@
-import API from "./src/api.json";
+import API from "./src/api.json" assert {type: "json"};
 
 const title = document.querySelector(".li__answer-reveal");
 const pictures = document.querySelectorAll("img");
