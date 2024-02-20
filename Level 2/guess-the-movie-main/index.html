@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frame Quiz</title>
+    <link rel="stylesheet" href="style-dev.css">
+    <script type="module" src="main-nightly.js" defer="true"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Guess the Movie From The Following Frames</h1>
+    </header>
+    <main>
+      <!-- data-loading are css visibility toggles -->
+      <!-- data-active are css animation toggles (li and .timer-bar are currently removed) -->
+      <section data-active> 
+        <p class="section__landing-text">Loading<span class="ellipse-1" data-loading>.</span><span class="ellipse-2" data-loading>.</span><span class="ellipse-3" data-loading>.</span></p>
+        <br>
+        <div class="div__button-container" data-loading>
+          <button type="button" id="standard-btn">Standard</button>
+          <button type="button" id="hard-btn">Hard</button>
+        </div>
+      </section>
+      <ul>
+        <li><h3 class="frame-1">Get Ready...</h3></li>
+        <li><img class="frame-2" src="" alt=""></li>
+        <li><img class="frame-3" src="" alt=""></li>
+        <li><img class="frame-4" src="" alt=""></li>
+        <li><img class="frame-5" src="" alt=""></li>
+        <li><img class="frame-6" src="" alt=""></li>
+        <li><h3 class="frame-7 li__answer-reveal"></h3></li>
+      </ul>
+    </main>
+    <footer>
+      <div class="timer-container">
+        <div class="timer-bar"></div>
+      </div>
+    </footer>
+  </body>
+</html>
