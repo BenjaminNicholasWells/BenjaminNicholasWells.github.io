@@ -2,6 +2,10 @@
     --custom-delay: 32000ms;
 }
 
+button:focus:not(:focus-visible) {
+    outline: none 
+}
+
 *, *::after, *::before, button {
     padding: 0;
     margin: 0;
@@ -86,7 +90,7 @@ p {
     gap: 6px;
 }
 
-button {
+.div__button-container > button {
     width: 12rem;
     padding: 0.25rem 0;
     background-color: black;
@@ -96,11 +100,14 @@ button {
     border-radius: 0.5rem;
 }
 
-button:hover, button:focus {
+button:hover {
     cursor: pointer;
     background-color: white;        
     color: black;
-    outline: none;
+}
+
+button:focus {
+    outline: 3px solid limegreen;
 }
 
 ul {
@@ -143,7 +150,8 @@ img {
 }
 
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 52dvw 1fr;
     justify-content: center;
     align-items: center;
 }
@@ -154,6 +162,59 @@ footer {
     overflow: hidden;
     width: 50dvw;
     height: 2dvh;
+}
+
+.footer__controls-container {
+    visibility: visible;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__controls-container[data-loading] {
+    visibility: hidden;
+}
+
+.footer__controls-container > button {
+    aspect-ratio: 1/1;
+    height: 4dvh;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    /* padding: 0.25rem; */
+    overflow: hidden;
+}
+
+svg {
+    /* color: white; */
+    fill: white;
+}
+
+.state-btn > svg:hover {
+    cursor: pointer;
+    background-color: white;
+    fill: black;
+}
+
+.state-btn[data-active] > svg {
+    background-color: white;
+    fill: black;
+}
+
+.footer__answer-reveal {
+    position: absolute;
+    font-size: 3dvw;
+    text-align: right;
+    bottom: 10dvh;
+    right: 2dvw;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 1dvw;
+    visibility: visible;
+    transition: 500ms ease-in;
+}
+
+.footer__answer-reveal[data-active="false"] {
+    visibility: hidden;
+    transition: 500ms ease-in;
 }
 
 @keyframes timer {
@@ -176,7 +237,7 @@ footer {
     animation-name: timer;
     animation-duration: var(--custom-delay);
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 @keyframes frame1 {
@@ -249,7 +310,7 @@ footer {
     0% {opacity: 0;}
     90% {opacity: 0;}
     92% {opacity: 1;}
-    99% {opacity: 1;}
+    98% {opacity: 1;}
     100% {opacity: 0;}
     
 }

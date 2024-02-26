@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <h1>Guess the Movie From The Following Frames</h1>
+      <h1>Guess The Movie From The Following Frames</h1>
     </header>
     <main>
       <!-- data-loading are css visibility toggles -->
@@ -33,8 +33,17 @@
       </ul>
     </main>
     <footer>
+      <div>
+        <!-- Empty div for CSS grid purposes -->
+      </div>
       <div class="timer-container">
         <div class="timer-bar"></div>
+      </div>
+      <div class="footer__controls-container" data-loading>
+        <button class="state-btn" id="play-btn" data-active><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M323.5-208.5v-549l431 274.5-431 274.5ZM381-483Zm0 170 267.5-170L381-653v340Z"/></svg></button>
+        <button class="state-btn" id="pause-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M526-204v-552h230v552H526Zm-322 0v-552h230v552H204Zm379.5-57.5h115v-437h-115v437Zm-322 0h115v-437h-115v437Zm0-437v437-437Zm322 0v437-437Z"/></svg></button>
+        <button id="next-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M678-244.5v-471h57.5v471H678Zm-453.5 0v-471l339 235.5-339 235.5ZM282-480Zm0 125.5L463-480 282-605.5v251Z"/></svg></button>
+        <p class="footer__answer-reveal" data-active="false"></p>
       </div>
     </footer>
   </body>
