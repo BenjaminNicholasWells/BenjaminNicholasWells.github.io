@@ -156,6 +156,14 @@ footer {
     align-items: center;
 }
 
+.footer__speed-controls-container {
+    visibility: visible;
+}
+
+.footer__speed-controls-container[data-loading] {
+    visibility: hidden;
+}
+
 .timer-container {
     border-radius: 4rem;
     border: 0.5dvh solid white;
@@ -164,7 +172,7 @@ footer {
     height: 2dvh;
 }
 
-.footer__controls-container {
+.footer__speed-controls-container, .footer__controls-container {
     visibility: visible;
     display: flex;
     justify-content: space-evenly;
@@ -174,7 +182,7 @@ footer {
     visibility: hidden;
 }
 
-.footer__controls-container > button {
+.footer__speed-controls-container > button, .footer__controls-container > button {
     aspect-ratio: 1/1;
     height: 4dvh;
     background-color: black;
